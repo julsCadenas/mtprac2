@@ -9,7 +9,7 @@ struct Node{
 };
 
 
-// DISPLAY THE LINKE LIST AND THE NUMBER OF NODES
+// DISPLAY THE LINKED LIST AND THE NUMBER OF NODES
 void display(Node *node,int counter){
     if(node==NULL){
         std::cout<<"your list is empty";
@@ -91,18 +91,17 @@ void reverse(Node* &node){
 
 // FIND A SPECIFIC NODE
 void find(Node* node,int num){
-    bool found=false;
+    bool find=false;
     while(node!=NULL){
         if(node->data==num){
-            std::cout<<"node found: "<<node->data<<std::endl;
-            found=true;
+            std::cout<<"node "<<num<<" is found"<<std::endl;
+            find=true;
         }
         node=node->next;
     }
-    if(found==false){
-        std::cout<<"node not found"<<std::endl;
+    if(find==false){
+        std::cout<<"node "<<num<<" is not found"<<std::endl;
     }
-
 }
 
 
